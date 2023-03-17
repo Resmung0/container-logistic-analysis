@@ -1,0 +1,51 @@
+[tool.coverage.report]
+fail_under = 0
+show_missing = true
+exclude_lines = ["pragma: no cover", "raise NotImplementedError"]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.0.1"
+tag_format = "$version"
+
+[tool.poetry]
+name = "container_logistic_analysis"
+version = "0.0.1"
+description = "A project for estimating the time of arrival from containers vessels."
+authors = ["Marcos Gabriel <mg.21191077@gmail>"]
+license = "MIT"
+readme = ["README.md"]
+repository = "https://github.com/Resmung0/Container-logistics-analysis"
+packages = [
+	{include = "scripts", from = "src"},
+	{include = "tests", from = "src"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.20.0 "
+fastapi = "^0.94.0"
+pandas = "^1.5.3"
+scikit-learn = "^1.2.2"
+scrapy = "^2.8.0"
+hydra-core = "^1.3.2"
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.4.2"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.2.0"
+pylint = "^2.17.0"
+ipykernel = "^6.21.3"
+commitizen = "^2.42.1"
+seaborn = "^0.12.2"
+
+[tool.poetry.group.test.dependencies]
+pytest = "~7.2.2"
+pytest-cov = "^4.0.0"
+pytest-mock = "^3.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

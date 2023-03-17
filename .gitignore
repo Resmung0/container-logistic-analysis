@@ -1,0 +1,19 @@
+##########################
+# Python
+__pycache__/
+
+# Environment
+.venv/**
+poetry.toml
+
+# Jupyter notebooks
+notebooks/**
+
+# Tests
+.pytest_cache
+
+# Logs
+logs/**
+
+# Local files
+configs/local/**
